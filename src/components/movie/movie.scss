@@ -1,0 +1,61 @@
+@import '../../styles/includes';
+
+#movie-wallpaper img {
+    height: 25rem;
+    width: 100%;
+}
+
+#movie-info {
+    display: flex;
+    margin-inline: 24%;
+
+    #movie-poster img {
+        height: 15rem;
+        width: 8.75rem;
+        transform: translateY(-40px);
+    }
+
+    #movie-details {
+        margin: 1% 4%;
+        min-height: 29rem;
+
+        #movie-title {
+            font-size: map-get($sizing, 'w-24');
+            font-weight: 700;
+            margin-bottom: map-get($sizing, 'w-11');
+        }
+
+        #movie-synopsis {
+            margin-bottom: map-get($sizing, 'w-11');
+        }
+
+        .movie-detail {
+            display: flex;
+
+            .movie-detail__name {
+                width: 28%;
+                margin-bottom: map-get($sizing, 'w-3');
+                font-weight: 700;
+            }
+            
+            .movie-detail__value {
+                color: $gray-500;
+            }
+
+            #movie-companies {
+                display: flex;
+            
+                img {
+                    height: 4.375rem;
+                    width: 11.875rem;
+                    margin-top: map-get($sizing, 'w-7');
+                }
+            
+                .company {
+                    margin-right: map-get($sizing, 'w-40');
+                }
+            }
+        }
+    }
+}
+

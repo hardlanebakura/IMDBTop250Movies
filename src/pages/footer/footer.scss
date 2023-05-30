@@ -1,0 +1,9 @@
+@import '../../styles/includes.scss';
+
+#footer {
+    height: map-get($sizing, 'w-40');
+    background-color: $lightblue;
+    color: $white;
+    text-transform: uppercase;
+    @include row;
+}
