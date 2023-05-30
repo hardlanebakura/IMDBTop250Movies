@@ -9,16 +9,11 @@ app.use(express.text())
 app.use(bodyParser.text({type:"*/*"}));
 
 const PORT = 5001;
-
-const axios = require('axios');
+const SQLConfig = require('./config/SQLConfig');
+console.log(SQLConfig);
 
 var mysql  = require('mysql');
-var connection = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "imdbtop250movies"
-});
+var connection = mysql.createConnection({SQLConfig});
 
 connection.connect();
 
